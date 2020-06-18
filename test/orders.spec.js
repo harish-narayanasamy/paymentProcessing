@@ -1,4 +1,4 @@
-var orders = require('../scalaSDK/index');
+var api = require('../scalaSDK/index');
 
 describe('Order', function () {
 
@@ -22,7 +22,7 @@ describe('Order', function () {
             redirect: 'follow'
         };
 
-        let op = await orders(url, options);
+        let op = await api.orders(url, options);
         expect.assertions(1);
         expect(op).toEqual(expect.objectContaining({
             token: expect.any(String),
@@ -51,7 +51,7 @@ describe('Order', function () {
             redirect: 'follow'
         };
 
-        let op = await orders(url, options);
+        let op = await api.orders(url, options);
         expect.assertions(1);
         expect(op).toEqual(expect.not.objectContaining({
             token: expect.any(String),

@@ -1,4 +1,4 @@
-var configurations = require('../scalaSDK/index');
+var api = require('../scalaSDK/index');
 
 describe('Configuration', function () {
 
@@ -36,7 +36,7 @@ describe('Configuration', function () {
         };
 
 
-        let op = await configurations(url, options);
+        let op = await api.configurations(url, options);
         expect.assertions(1);
         expect(op).toEqual(output);
     });
