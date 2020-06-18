@@ -98,16 +98,6 @@
 			form.append("redirectConfirmUrl", ConfirmURL);
 			form.append("redirectCancelUrl", CancelURL);
 
-			/*
-						var form = new FormData();
-						form.append("totalAmount", totalAmount);
-						form.append("currency", "EUR");
-						form.append("givenNames", "Harish");
-						form.append("surname", "Samy");
-						form.append("email", "harish.nsamy@gmail.com");
-						form.append("redirectConfirmUrl", "https://staging.portal.scalapay.com/success-url");
-						form.append("redirectCancelUrl", "https://staging.portal.scalapay.com/failure-url");
-			*/
 			var settings = {
 				"url": "http://localhost:3000/v1/orders",
 				"method": "POST",
@@ -121,8 +111,7 @@
 			$.ajax(settings)
 
 				.done(function (response) {
-					console.log(response)
-					console.log(totalAmount, currency, givenNames, surname, email, ConfirmURL, CancelURL)
+
 
 					data = jQuery.parseJSON(response);
 					var constructTable = '<table border="1" cellspacing="10" cellpadding="10">';
@@ -154,13 +143,12 @@
 				<div class="form">
 
 					<label for="totalAmount">Total Amount:</label><br>
-					<input type="text" id="totalAmount" name="totalAmount"><br><br>
+					<input type="number" id="totalAmount" name="totalAmount"><br><br>
 
 					<label for="currency">Currency:</label>
 					<select name="currency" id="currency">
 						<option value="EUR">EUR</option>
-						<option value="AUD">AUD</option>
-						<option value="USD">USD</option>
+
 					</select><br>
 
 					<label for="givenNames">Givenname:</label><br>
