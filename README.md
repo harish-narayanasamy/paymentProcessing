@@ -2,59 +2,43 @@
 
 Testing the ScalaAPI
 
-Requirements
-============
---Node
---NPM
---pm2
+# Requirements
 
+Node
+NPM
+pm2
 
-Step1: 
+# Step1: Install pm2 globally
 
-Install pm2 globally
-=====================
-$ npm install pm2 -g
+\$ npm install pm2 -g
 
-Step2: 
+# Step2: Clone the Repository/download .zip file
 
-Clone the Repository/download .zip file
+git clone https://github.com/harish-narayanasamy/paymentProcessing.git
 
-Step3:
+# Step3: Download the dependencies
 
-Download the dependencies
-==========================
 cd paymentProcessing
 npm install
 
-Step4:
-
-To Run the App Locally
-======================
+# Step4:To Run the App Locally
 
 "pm2-runtime start ecosystem.config.js --env local"
 
+# Step5:Accessing the WebApp
 
-Step5:
-Accessing the WebApp
-=====================
 Please proceed the below URL in your browser
 http://localhost:3000/webApp
 
-Step6:
-Accessing the API(POSTMAN)
-=====================
+# Step6:Accessing the API(POSTMAN)
 
 http://localhost:3000/v1/configurations
 http://localhost:3000/v1/orders
 
-Step7:
-Run testcases(JEST)
-=====================
+# Step7:Run testcases(JEST)
+
 npm test
 
-Step8:
-Code(JEST)
-=====================
+# Step8:Code Coverage(JEST)
+
 npx jest --coverage
-
-
