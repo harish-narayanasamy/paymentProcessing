@@ -4,7 +4,7 @@
   "main": "bin/www",
   "license": "MIT",
   "scripts": {
-    "local": "pm2-runtime start ecosystem.config.js --env local",
+    "local": "pm2 start ecosystem.config.js --env local",
     "dev": "pm2 start ecosystem.config.js --env development",
     "test": "jest"
   },

@@ -23,7 +23,7 @@ npm install
 
 # Step4:To Run the App Locally
 
-"pm2-runtime start ecosystem.config.js --env local"
+pm2 start ecosystem.config.js --env local
 
 # Step5:Accessing the WebApp
 
